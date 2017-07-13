@@ -69,7 +69,6 @@
    }
 
   div.main-wrapper {
-    margin-top: 3em;
    }
 
   div.cats-profiles {
@@ -106,8 +105,8 @@ export default {
   },
   template: '<catscontainer/>',
   components: {
-    weekcat: weekcat,
-    catitem: catitem
+    weekcat,
+    catitem
   }
 }
 </script>

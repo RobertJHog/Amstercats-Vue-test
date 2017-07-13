@@ -40,12 +40,6 @@ div.week-cat {
 <script>
 
 export default {
-  name: 'weekcat',
-  data () {
-    return {
-      msg: 'Welcome to Amstercats'
-    }
-  }
+  name: 'weekcat'
 }
-
 </script>
