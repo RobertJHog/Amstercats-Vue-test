@@ -1,0 +1,69 @@
+
+{
+  "cats": [
+    {
+          "name": "Wally",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 7,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    },
+    {
+          "name": "Wally2",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 8,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    },
+    {
+          "name": "Wally3",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 7,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    },
+    {
+          "name": "Wally4",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 8,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    },
+    {
+          "name": "Wally5",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 7,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    },
+    {
+          "name": "Wally6",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 8,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    },
+    {
+          "name": "Wally7",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 7,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    },
+    {
+          "name": "Wally8",
+          "summary": "Very active cat that loves to actively play and follows his owners around the house",
+          "age": 8,
+          "breed": "ragdoll",
+          "liked": false,
+          "profilephoto": "http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg"
+    }
+  ]
+}
