@@ -1,0 +1,88 @@
+<template>
+  <div id="catitem">
+    <article class="cat">
+      <header>
+        <div class="profile-photo">
+          <img id="main-profile-photo" src="http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg" />
+        </div>
+        <h3 id="catname"> </Link> </h3>
+        <div class="stats">
+            <p> <strong> Age: </strong>  1 year</p>
+            <p> <strong> Breed: </strong> Ragdoll</p>
+            <p> <strong> Origin: </strong> Amsterdam, Netherlands </p>
+        </div>
+      </header>
+      <main>
+          <div class="summary">
+            <h3> Bio: </h3>
+            <p>Lovely little furball</p>
+          </div>
+      </main>
+          <footer>
+            <div id="LikeButton">
+              <h2> Insert Like Button </h2>
+              </div>
+          </footer>
+    </article>
+  </div>
+</template>
+
+<style scoped>
+
+article.cat {
+  border-style: solid;
+  border-color: #ff751a;
+  flex-basis: 20%;
+  min-width: 20%;
+  margin-bottom: 3.125em;
+  margin-right: 5em;
+  margin-left: 5em;
+  margin-top: 2.875em;
+  color: black;
+  font-size: 100%;
+  overflow: hidden;
+  padding: 2em;
+  border-radius: 5%;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25);
+  background-color: lightgrey;
+}
+
+div.profile-photo {
+  text-align: center;
+}
+div.stats {
+  margin-bottom: 40px;
+}
+
+#main-profile-photo {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 5%;
+  margin-right: 40px;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625);
+  margin-top: 1em;
+}
+
+footer {
+  padding: 10px 20px;
+
+}
+#LikeButton {
+  text-align: right;
+  font-size: 1.75em;
+}
+
+#catname {
+  text-align: center;
+  font-size: 2em;
+}
+
+</style>
+
+<script>
+
+export default {
+  name: 'catitem'
+}
+
+</script>
