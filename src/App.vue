@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navbar></navbar>
     <router-view></router-view>
     <catfooter></catfooter>
   </div>
@@ -8,10 +9,13 @@
 <script>
 
 import catfooter from './components/footer'
+import navbar from './components/nav'
+
 export default {
   name: 'app',
   components: {
-    catfooter
+    catfooter,
+    navbar
   }
 }
 </script>
