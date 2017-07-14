@@ -11,7 +11,7 @@
     background-color: black;
     color: white;
     text-align: center;
-    height: 3em;
+    height: 2em;
     padding: 1em;
     width: 97.75%;
   }

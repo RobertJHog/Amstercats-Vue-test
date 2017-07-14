@@ -24,11 +24,18 @@
 <style scoped>
 
   div.profilepage {
-    color: white;
+    color: black;
     background-color: #ad2b34;
     text-align: center;
-    height: 100%;
-    padding: 6em;
+    height: 90%;
+    padding-top: 4em;
+    padding-bottom: 5em;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  h3 {
+    color: darkblue;
   }
 
   div.profile-wrapper {
@@ -75,7 +82,7 @@
   }
 
   #profile-bio {
-    color: white;
+    color: darkblue;
   }
 
   footer {
