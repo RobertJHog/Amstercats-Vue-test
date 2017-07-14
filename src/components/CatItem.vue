@@ -5,8 +5,8 @@
         <div class="profile-photo">
           <img id="main-profile-photo" src="http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg" />
         </div>
-        <h3 id="catname"> </Link> </h3>
-        <div class="stats">
+          <h3 id="catname"><router-link to="/catprofiles">Wally</router-link></h3>
+          <div class="stats">
             <p> <strong> Age: </strong>  1 year</p>
             <p> <strong> Breed: </strong> Ragdoll</p>
             <p> <strong> Origin: </strong> Amsterdam, Netherlands </p>

@@ -4,7 +4,7 @@
         <div class="intro-week-wrapper">
           <div class="intro-text">
                 <h1> Welcome to the lovely cats of Amsterdam! </h1>
-                <p>A prototype website for my (mostly female =) ) friends who adore cats. A user can create <br>
+                <p> A prototype website for my (mostly female =) ) friends who adore cats. A user can create <br>
                 and modify profiles for their own cats and share pictures with friends.</p>
                 <ul>
                   <li> Add your own cat profile to the site </li>
@@ -42,9 +42,9 @@
 <style scoped>
 
   div.page-wrapper{
+    padding: 3em;
     color: white;
     background-color: #ad2b34;
-    padding: 2em;
   }
 
   div.intro-text {
