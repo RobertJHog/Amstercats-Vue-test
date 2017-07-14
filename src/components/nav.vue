@@ -1,9 +1,9 @@
 <template>
   <div id="navbar">
-    <h1 id="nav-title"> Amstercats </h1>
+    <h1 id="nav-title"><router-link to="/">Amstercats</router-link></h1>
       <div id="nav-link-wrapper">
-        <p id="nav-links"><router-link to="/">Home</router-link></p>
         <p id="nav-links"><router-link to="/login">Login</router-link></p>
+        <p id="nav-links"><router-link to="/signup">Sign up</router-link></p>
       </div>
   </div>
 </template>
@@ -13,24 +13,23 @@
   #nav-title {
     text-align: left;
     margin-top: 0em;
+    margin-left: 1em;
     flex: 1;
   }
 
   a {
     text-decoration: none!important;
     color: white;
-    font-size: 120%;
-  }
-
-  #nav-link-wrapper {
-    margin-top: -1.3em;
-    margin-right: 2em;
+    font-size: 100%;
   }
 
   #nav-links {
+    margin-top: -.2em;
+    margin-right: 2em;
     flex: 1;
     text-decoration: none!important;
     color: white;
+    font-size: 110%;
   }
 
   #navbar {
@@ -50,8 +49,15 @@
 
 <script>
 
-  export default {
-    name: 'navbar'
+import login from './login'
+import signup from './signup'
+
+export default {
+  name: 'navbar',
+  components: {
+    login,
+    signup
   }
+}
 
 </script>

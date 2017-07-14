@@ -31,13 +31,12 @@
 <style scoped>
 
 article.cat {
-  border-style: solid;
   border-color: #ff751a;
   flex-basis: 20%;
-  min-width: 20%;
+  width: 80%;
+  margin-left: 3em;
+  margin-right: 3em;
   margin-bottom: 3.125em;
-  margin-right: 5em;
-  margin-left: 5em;
   margin-top: 2.875em;
   color: black;
   font-size: 100%;
@@ -59,7 +58,6 @@ div.stats {
   max-width: 300px;
   max-height: 300px;
   border-radius: 5%;
-  margin-right: 40px;
   box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625);
   margin-top: 1em;
 }

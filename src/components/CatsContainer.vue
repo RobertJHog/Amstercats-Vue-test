@@ -94,6 +94,7 @@
 
 import weekcat from './WeekCat.vue'
 import catitem from './CatItem.vue'
+import login from './login.vue'
 import preload from '../../catdata.json'
 
 export default {
@@ -106,7 +107,8 @@ export default {
   template: '<catscontainer/>',
   components: {
     weekcat,
-    catitem
+    catitem,
+    login
   }
 }
 </script>

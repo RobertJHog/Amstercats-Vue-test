@@ -12,15 +12,13 @@ h1, h2 {
   text-align: center;
 }
 
-div.week-cat {
-  align-items: center;
+#weekcat {
   border: 2px solid #ff751a;
   box-sizing: border-box;
   margin-top: 20px;
   margin-right: 40px;
   width: 300px;
-  height: 500px;
-  font-size: 10em;
+  height: 400px;
   overflow: hidden;
   padding: 12px;
   border-radius: 5%;
@@ -29,7 +27,7 @@ div.week-cat {
   text-align: center;
 }
 #week-profile-photo {
-  max-width: 200px;
+  max-width: 175px;
   max-height: 300px;
   border-radius: 5%;
   box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625);
