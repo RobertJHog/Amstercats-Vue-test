@@ -21,7 +21,7 @@
 <script>
 
   export default {
-    name: 'footer'
+    name: 'catfooter'
   }
 
 </script>

@@ -20,7 +20,8 @@
       </main>
           <footer>
             <div id="LikeButton">
-              <h2> Insert Like Button </h2>
+              <img src="../images/heart-cat-grey.svg" alt="Like Button" height="42" width="42" />
+              <!-- <likebutton></likebutton> -->
               </div>
           </footer>
     </article>
@@ -80,9 +81,13 @@ footer {
 </style>
 
 <script>
+// import likebutton from './likebutton'
 
 export default {
-  name: 'catitem'
+  name: 'catitem',
+  components: {
+    // likebutton
+  }
 }
 
 </script>
