@@ -18,13 +18,19 @@
             </div>
       </div>
    </div>
+   <div class="cat-creator">
+     <catcreate></catcreate>
+    <div class="cat-gallery">
+      <gallery></gallery>
+    </div>
+   </div>
  </div>
 </template>
 
 <style scoped>
 
   div.profilepage {
-    color: black;
+    color: white;
     background-color: #ad2b34;
     text-align: center;
     height: 90%;
@@ -94,8 +100,15 @@
 
 <script>
 
+  import catcreate from './CatCreate'
+  import gallery from './Gallery'
+
   export default {
-    name: 'catprofile'
+    name: 'catprofile',
+    components: {
+      catcreate,
+      gallery
+    }
   }
 
 </script>

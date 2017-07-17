@@ -47,6 +47,10 @@ article.cat {
   background-color: lightgrey;
 }
 
+a {
+  text-decoration: none;
+}
+
 div.profile-photo {
   text-align: center;
 }
