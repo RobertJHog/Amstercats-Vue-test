@@ -2,7 +2,7 @@
   <div id="weekcat">
     <h1> Cat of the day! </h1>
     <img id="week-profile-photo" src="http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg" alt="Mountain View" style="width:304px;height:228px;">
-    <h2> Wally </h2>
+    <h2 id="catname"><router-link to="/catprofiles">Wally</router-link></h3> </h2>
   </div>
 </template>
 
@@ -10,6 +10,11 @@
 
 h1, h2 {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 #weekcat {
@@ -26,6 +31,7 @@ h1, h2 {
   color: white;
   text-align: center;
 }
+
 #week-profile-photo {
   max-width: 175px;
   max-height: 300px;

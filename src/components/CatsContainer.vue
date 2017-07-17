@@ -23,8 +23,9 @@
           <div class="profile-title">
             <Title content="AmsterCats Profiles" />
           </div>
-          <h1 id="Amstercats-title"> All Amstercats! </h1>
+          <h1 id="Amstercats-title"> All Amstercats </h1>
           <div class="cats-profiles">
+            <!-- <li v-for="preload"> </li> -->
               <catitem></catitem>
               <catitem></catitem>
               <catitem></catitem>
@@ -101,7 +102,7 @@ export default {
   name: 'catsontainer',
   data: function () {
     return {
-      preload: preload
+      preload
     }
   },
   template: '<catscontainer/>',
