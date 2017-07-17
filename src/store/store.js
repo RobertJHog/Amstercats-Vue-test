@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  count: 3
+  count: 3,
+  liked: false
 }
 
 const getters = {

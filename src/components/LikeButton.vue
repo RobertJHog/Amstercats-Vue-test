@@ -1,100 +1,46 @@
 <template>
-  <button
-    type="submit"
-    class="btn"
-    v-text="text"
-    v-class="btn-unlike: ! liked, btn-like: liked"
-    v-on="click: toggleLike"
-    v-attr="disabled: submitted">Like</button>
+    <span>
+        <a href="#" v-if="isFavorited" @click.prevent="unFavorite(post)">
+            <i  class="fa fa-heart"></i>
+        </a>
+        <a href="#" v-else @click.prevent="favorite(post)">
+            <i  class="fa fa-heart-o"></i>
+        </a>
+    </span>
 </template>
 
-<style>
-
-.like button {
-  border: 0;
-  background: transparent;
-  outline: none;
-  font-size: 1.5em;
-}
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  span.copy {
-    position: absolute;
-    margin-left: -1em;
-    z-index: -1;
-    opacity: 0;
-  }
-
-img.heart {
-  height: 1em;
-}
-
-.likes {
-  font-size: 0.8em;
-  color: #999;
-}
-
-.liked button span.copy {
-  z-index: 9;
-  animation: heart 1s 1 ease-in-out;
-}
-
-@keyframes heart {
-  10% {
-    margin-top: 0px;
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.8;
-    margin-top: -30px;
-  }
-
-  100% {
-    margin-top: -80px;
-    opacity: 0;
-  }
-}
-
-</style>
-
 <script>
+    export default {
+        props: ['cat', 'favorited'],
 
-  export default {
-    name: 'likebutton',
-    template: '<likebutton/>',
-    methods: {
-      toggleLike: function() {
-          if(this.liked) {
-              this.unlikePhoto()
-          } else {
-              this.likePhoto()
-          }
-      },
+        data: function() {
+            return {
+                isFavorited: '',
+            }
+        },
 
-      likePhoto: function() {
-          this.submitted = true;
+        mounted() {
+            this.isFavorited = this.isFavorite ? true : false;
+        },
 
-          this.$http.post('/likes', {'photo': this.photo}, function(resp) {
-              this.liked = true;
-              this.submitted = false;
-              this.text = 'Unlike';
-          });
-      },
+        computed: {
+            isFavorite() {
+                return this.favorited;
+            },
+        },
 
-      unlikePhoto: function() {
-          this.submitted = true;
+        methods: {
+            favorite(cat) {
+                axios.post('/favorite/'+cat)
+                    .then(response => this.isFavorited = true)
+                    .catch(response => console.log(response.data));
+            },
 
-          this.$http.delete('/likes/' + this.photo, function(resp) {
-              this.liked = false;
-              this.submitted = false;
-              this.text = 'Like';
-          });
-      }
+            unFavorite(cat) {
+                axios.post('/unfavorite/'+cat)
+                    .then(response => this.isFavorited = false)
+                    .catch(response => console.log(response.data));
+            }
+        }
     }
-  }
-
 </script>
