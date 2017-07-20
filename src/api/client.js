@@ -1,14 +1,19 @@
-import feathers from 'feathers/client'
-import rest from 'feathers-rest/client'
-import hooks from 'feathers-hooks'
-import auth from 'feathers-authentication-client'
-import superagent from 'superagent'
+// Include and set up feathers client
+const Feathers = require('feathers/client')
+const hooks = require('feathers-hooks')
+const authentication = require('feathers-authentication/client')
+const socketio = require('feathers-socketio/client')
+const io = require('socket.io-client')
 
-const host = 'http://localhost:3030'
+const socket = io('http://localhost:3030/')
+const feathers = Feathers()
+.configure(socketio(socket))
+.configure(hooks())
+.configure(authentication({storage: window.localStorage}))
 
-const feathersClient = feathers()
-  .configure(rest(host).superagent(superagent))
-  .configure(hooks())
-  .configure(auth())
+// Include it as a CommonJS module
+const Vue = require('vue')
+const vueFeathers = require('vue-feathers')
 
-export default feathersClient
+// And plug it in
+Vue.use(vueFeathers)

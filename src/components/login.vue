@@ -26,9 +26,7 @@
               </form>
           </div>
         </section>
-      <testcomponent></testcomponent>
   </div>
-
 </template>
 
 <style>
@@ -64,12 +62,8 @@
 
 <script>
 
-  import testcomponent from './testcomponent'
-
   export default {
     name: 'login',
-    components: {
-      testcomponent },
     data: () => {
       return {
         auth: {

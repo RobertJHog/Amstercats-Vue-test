@@ -1,46 +1,31 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import _ from 'lodash'
+
 Vue.use(Vuex)
 
 const state = {
-  count: 3,
-  liked: false
-}
-
-const getters = {
-  evenOrOdd: state => state.count % 2 === 0 ? 'even' : 'odd'
+  cats: []
 }
 
 const mutations = {
-  increment (state) {
-    state.count++
+  FETCH_CATS (state, cats) {
+    state.cats = cats
   },
-  decrement (state) {
-    state.count--
-  }
-}
 
-const actions = {
-  increment: ({ commit }) => commit('increment'),
-  decrement: ({ commit }) => commit('decrement'),
-  incrementIfOdd ({ commit, state }) {
-    if ((state.count + 1) % 2 === 0) {
-      commit('increment')
-    }
+  ADD_CAT (state, cat) {
+    state.cats.push(cat)
   },
-  incrementAsync ({ commit }) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        commit('increment')
-        resolve()
-      }, 1000)
-    })
+
+  REMOVE_CAT (state, cat) {
+    // find the index of the object that needs to be removed from array
+    let index = _.findIndex(state.cats, { _id: cat._id })
+    // remove the object at position [index] from array
+    state.cats.$remove(state.cats[index])
   }
 }
 
 export default new Vuex.Store({
   state,
-  getters,
-  mutations,
-  actions
+  mutations
 })

@@ -15,8 +15,11 @@
     "feathers-authentication-client": "^0.3.2",
     "feathers-hooks": "^2.0.2",
     "feathers-rest": "^1.8.0",
+    "feathers-socketio": "^2.0.0",
+    "socket.io-client": "^2.0.3",
     "superagent": "^3.5.2",
     "vue": "^2.3.3",
+    "vue-feathers": "^0.1.0",
     "vue-router": "^2.6.0",
     "vue2-medium-editor": "^1.1.0",
     "vuex": "^2.3.1"

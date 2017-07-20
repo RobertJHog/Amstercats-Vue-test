@@ -100,15 +100,15 @@
 
 <script>
 
-  import catcreate from './CatCreate'
-  import gallery from './Gallery'
+import catcreate from './CatCreate'
+import gallery from './Gallery'
 
-  export default {
-    name: 'catprofile',
-    components: {
-      catcreate,
-      gallery
-    }
+export default {
+  name: 'catprofile',
+  components: {
+    catcreate,
+    gallery
   }
+}
 
 </script>
