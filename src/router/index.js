@@ -14,7 +14,7 @@ const routes = [
     component: CatsContainer
   },
   {
-    path: '/catprofiles',
+    path: '/catprofiles/:id',
     name: 'CatProfile',
     component: CatProfile
   },

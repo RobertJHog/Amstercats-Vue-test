@@ -25,15 +25,9 @@
           </div>
           <h1 id="Amstercats-title"> All Amstercats </h1>
           <div class="cats-profiles">
-            <!-- <li v-for="preload"> </li> -->
-              <catitem></catitem>
-              <catitem></catitem>
-              <catitem></catitem>
-              <catitem></catitem>
-              <catitem></catitem>
-              <catitem></catitem>
-              <catitem></catitem>
-              <catitem></catitem>
+            <ul v-for="cat in cats">
+              <catitem :cat="cat"></catitem>
+            </ul>
           </div>
         </div>
       </main>
@@ -96,13 +90,12 @@
 import weekcat from './WeekCat.vue'
 import catitem from './CatItem.vue'
 import login from './login.vue'
-import preload from '../../catdata.json'
 
 export default {
   name: 'catsontainer',
-  data: function () {
-    return {
-      preload
+  computed: {
+    cats () {
+      return this.$store.getters.cats
     }
   },
   template: '<catscontainer/>',

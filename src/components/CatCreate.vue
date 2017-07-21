@@ -43,14 +43,10 @@
 
 <script>
   import * as services from '../services'
-  import { getCats } from '../store/getters'
   import { fetchCats, addCat, removeCat } from '../store/actions'
 
   export default {
     store: {
-      getters: {
-        cats: getCats
-      },
       actions: {
         fetchCats,
         addCat,
@@ -66,11 +62,11 @@
           summary: '',
           profilephoto: ''
         },
-        error: false,
-        cats: []
+        cats: [],
+        error: false
       }
     },
-    mount () {
+    mounted () {
       this.fetchCats()
       this.addCat()
       this.removeCat()
@@ -79,13 +75,11 @@
       onSubmitHandler: function (e) {
         console.log(this.newCat)
         Promise.all([
+          // persist newCat to the db
           services.catService.create({ ...this.newCat }).then(this.newCat = {})
         ])
           .then(results => {
             console.log('created Cat item\n', results[0])
-
-            // return users.find()
-            //   .then(results => console.log('find all items\n', results));
           })
           .catch(err => console.log('Error occurred:', err))
       },

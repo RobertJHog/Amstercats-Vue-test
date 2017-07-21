@@ -3,19 +3,18 @@
     <article class="cat">
       <header>
         <div class="profile-photo">
-          <img id="main-profile-photo" src="http://res.cloudinary.com/daahasvbo/image/upload/v1489924697/Wally1_kxmjd4.jpg" />
+          <img id="main-profile-photo" src=""/>
         </div>
-          <h3 id="catname"><router-link to="/catprofiles">Wally</router-link></h3>
+          <h3 id="catname"><router-link to="/catprofiles/:id">{{ cat.name }}</router-link></h3>
           <div class="stats">
-            <p> <strong> Age: </strong>  1 year</p>
-            <p> <strong> Breed: </strong> Ragdoll</p>
-            <p> <strong> Origin: </strong> Amsterdam, Netherlands </p>
+            <p> <strong> Age: </strong>  {{ cat.age }}</p>
+            <p> <strong> Breed: </strong> {{ cat.breed }}</p>
         </div>
       </header>
       <main>
           <div class="summary">
             <h3> Bio: </h3>
-            <p>Lovely little furball</p>
+            <p>{{ cat.summary }}</p>
           </div>
       </main>
           <footer>
@@ -83,13 +82,10 @@ footer {
 </style>
 
 <script>
-// import likebutton from './likebutton'
 
 export default {
   name: 'catitem',
-  components: {
-    // likebutton
-  }
+  props: ['cat']
 }
 
 </script>

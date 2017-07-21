@@ -5,7 +5,7 @@ import App from './App'
 import Vuex from 'vuex'
 import editor from 'vue2-medium-editor'
 import router from './router'
-import store from './store/store'
+import { store } from './store/store'
 
 Vue.config.productionTip = false
 
