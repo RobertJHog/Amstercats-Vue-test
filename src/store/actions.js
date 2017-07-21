@@ -1,16 +1,16 @@
 import * as services from '../services'
 
-export const fetchCats = function ({dispatch}) {
+export const fetchCats = function ({commit}) {
   // Call the cats service on the server via websocket
   services.catService.find({}).then(cats => {
-    dispatch('FETCH_CATS', cats.data)
+    commit('FETCH_CATS', cats.data)
   })
 }
 
-export const addCat = function ({dispatch}) {
+export const addCat = function ({commit}) {
   // A new cat has been created on the server, so dispatch a mutation to update our state/view
   services.catService.on('created', cat => {
-    dispatch('ADD_CAT', cat)
+    commit('ADD_CAT', cat)
   })
 }
 
